@@ -1,11 +1,53 @@
 <html>
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <meta charset="UTF-8" />
-  <title>Test</title>
+  <title>Thatchai</title>
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 </head>
 <body>
-  <div class="btn btn-info">test</div>
+
+  <div class="container">
+ 
+    <!-- mysql -->
+    <h4>Mysql</h4>
+    <dl>
+      <dt>mysql backup gzip</dt>
+      <dd>
+        <kbd>mysqldump -u user -p password dbname | gzip > dbname.dump.gz</kbd>
+      </dd>
+      <dt>mysql restore from gzip</dt>
+      <dd>
+        <kbd>zcat dbname.dump.gz | mysql -u user -p password dbname</kbd>
+      </dd>
+    </dl>
+
+    <!-- mac -->
+    <h4>Mac</h4>
+    <dl>
+      <dt>ssh config</dt>
+      <dd>
+        <span>edit /etc/ssh/sshd_config</span><br>
+        <kbd>
+          <span>PasswordAuthentication no</span><br>
+          <span>↓</span><br>
+          <span>PasswordAuthentication yes</span>
+        </kbd>
+      </dd>
+    </dl>
+
+    <!-- docker -->
+    <h4>Docker</h4>
+    <dl>
+      <dt>docker mount drive</dt>
+      <dd>
+        <span>mount folder in win os -mount in vm</span><br>
+        <kbd>sudo mount -t vboxsf {vm name folder} {linux folder}</kbd>
+      </dd>
+    </dl>
+
+  </div>
+
 </body>
 </html>
