@@ -15,11 +15,11 @@
     <dl>
       <dt>mysql backup gzip</dt>
       <dd>
-        <kbd>mysqldump -u user -p password dbname | gzip > dbname.dump.gz</kbd>
+        <blockquote>mysqldump -u user -p password dbname | gzip > dbname.dump.gz</blockquote>
       </dd>
       <dt>mysql restore from gzip</dt>
       <dd>
-        <kbd>zcat dbname.dump.gz | mysql -u user -p password dbname</kbd>
+        <blockquote>zcat dbname.dump.gz | mysql -u user -p password dbname</blockquote>
       </dd>
     </dl>
 
@@ -29,11 +29,11 @@
       <dt>ssh config</dt>
       <dd>
         <span>edit /etc/ssh/sshd_config</span><br>
-        <kbd>
+        <blockquote>
           <span>PasswordAuthentication no</span><br>
           <span>↓</span><br>
           <span>PasswordAuthentication yes</span>
-        </kbd>
+        </blockquote>
       </dd>
     </dl>
 
@@ -42,8 +42,26 @@
     <dl>
       <dt>docker mount drive</dt>
       <dd>
-        <span>mount folder in win os -mount in vm</span><br>
-        <kbd>sudo mount -t vboxsf {vm name folder} {linux folder}</kbd>
+        <span>mount folder in win os -mount in vm</span>
+        <blockquote>sudo mount -t vboxsf {vm name folder} {linux folder}</blockquote>
+      </dd>
+    </dl>
+
+    <!-- sourcetree -->
+    <h4>Sourcetree</h4>
+    <dl>
+      <dt>clone from privete key</dt>
+      <dd>
+        <span>แก้ permission ของ private key เป็น 600</span>
+        <blockquote>chmod 600 id_rsa</blockquote>
+          
+        <span>เปลี่ยน config</span>
+        <blockquote>
+          <span>Host gitserver</span><br />
+          <span>HostName 192.168.0.1</span><br />
+          <span>User gitUser</span>
+          <span>IdentityFile ~/.ssh/id_rsa</span>
+        </blockquote>
       </dd>
     </dl>
 
